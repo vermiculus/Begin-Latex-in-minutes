@@ -49,7 +49,7 @@ Or you can choose a simple online solution : [ShareLaTeX](https://www.sharelatex
 ## Your first LaTeX file
 
 Let's do the traditional **Hello World** in **LaTeX**.
-If you have installed **TexMaker**, first create a new file with ending ```.tex```. Then type in the following code below to render "Hello World!" and run "quick build"
+If you have installed **TexMaker**, first create a new file with ending `.tex`. Then type in the following code below to render "Hello World!" and run "quick build"
 
 ```tex
 \documentclass[a4paper]{article}
@@ -69,8 +69,8 @@ It should look like this in TexMaker:
 :eyes: A deeper look into your first LaTeX file easily shows that:
 
 * The first line tells the Interpreter that you are working on an **article** with the size of the a4. Other types of document you might be working with in the future are **report**, **book**, and so on.
-* A document is wrapped by the **\begin{document}** and **\end{document}** . Think of this as the heart of the document, as the ```main()``` in *java* or *C++* ... without which the document can't be rendered.
-* The part between begin and end ( which, in this case, is ```Hello World``` ) is simply your own content.
+* A document is wrapped by the **\begin{document}** and **\end{document}** . Think of this as the heart of the document, as the `main()` in *java* or *C++* ... without which the document can't be rendered.
+* The part between begin and end ( which, in this case, is `Hello World` ) is simply your own content.
 
 ### :warning: Important :warning:   
 **Some languages won't work right out of the box. You will need to include some packages for the font to render. Also, you will learn about "packages" later.** For example:  
@@ -88,7 +88,7 @@ Xin chào thế giới. This is Hellow World in Vietnamese.
 \end{document}
 ```
 
-Here we use two packages ```usepackage[T5]{fontenc}``` and ```usepackage[utf8]{inputenc}``` . This is really simple to understand as the package will import font encoders to display your content correctly. If you are using TexMaker this is what the above code displays:
+Here we use two packages `usepackage[T5]{fontenc}` and `usepackage[utf8]{inputenc}` . This is really simple to understand as the package will import font encoders to display your content correctly. If you are using TexMaker this is what the above code displays:
 
 ![](http://i.imgur.com/OUSPekM.png)
 
@@ -98,20 +98,20 @@ vs without the packages :package::
 
 ## Paragraph and section
 
-:blue_book: We begin a section with ```\section``` and a paragraph with ```\paragraph``` .   
-:orange_book: You can also add subsection with ```\subsection``` and subparagraph with ```\subparagraph```  
+:blue_book: We begin a section with `\section` and a paragraph with `\paragraph` .   
+:orange_book: You can also add subsection with `\subsection` and subparagraph with `\subparagraph`  
 
 ![](http://i.imgur.com/qKbZYnG.png)
 
 ## Making a table of contents
 
-:metal: It's useful to open sections and subsections with a ```\tableofcontents```
+:metal: It's useful to open sections and subsections with a `\tableofcontents`
 
 Example:
 
 ![](http://i.imgur.com/TBUOTRj.png)
 
-:bangbang: **Tips** : you can use ```\newpage``` if you want to make a new page.
+:bangbang: **Tips** : you can use `\newpage` if you want to make a new page.
 
 ## Footnotes
 
@@ -125,11 +125,11 @@ I'm referring to myself \ref{myfootnote}.
 
 ![](http://i.imgur.com/BSYPX4C.png)
 
-:bangbang: **Tips** : you can use ```\newline``` to make a new line.  
+:bangbang: **Tips** : you can use `\newline` to make a new line.  
 
 ## What is a package?
 
-LaTeX offers a lot of functions by default, but in some situations it can come in handy to use so called packages. To import a package in LaTeX, you simply add the ```\usepackage``` :package:  
+LaTeX offers a lot of functions by default, but in some situations it can come in handy to use so called packages. To import a package in LaTeX, you simply add the `\usepackage` :package:  
 
 Here is an example of using two packages for displaying math:
 
@@ -160,21 +160,21 @@ A practical example :thought_balloon: :
 
 Now let's take a closer look :eyes: :
 
-* For tables, first we need a table environment, which is why we have ```\begin{table}``` and ```\end{table}``` .
-* You will learn about h! later in the image section. It goes with ```\centering``` to keep the table at the center of the page.
+* For tables, first we need a table environment, which is why we have `\begin{table}` and `\end{table}` .
+* You will learn about h! later in the image section. It goes with `\centering` to keep the table at the center of the page.
 * Caption is for describing. Label is for tagging. You will see these more in image section.
 * Tabular is the most important part. A table environment always needs a tabular environment inside.
-  - the part ```{l|c||r}``` is where we format the content inside the table. Here we can see:
+  - the part `{l|c||r}` is where we format the content inside the table. Here we can see:
     * l or c or r means that the content inside each cell will be left-aligned or center-aligned or right-aligned, respectively.
     * the vertical slash | or || is actually the format of the vertical lines/borders inside the table's columns.
   - 1 & 2 & 3 => 1 2 3 are the contents of each cells. the ampersand & is used to separate the content of each cell in a row.
-  - a ```\hline``` actually adds a horizontal line to separate each row.
+  - a `\hline` actually adds a horizontal line to separate each row.
 
-:bangbang: **Tips** You can use a package :package: called booktabs ```\usepackage{booktabs}``` for a visually better table.
+:bangbang: **Tips** You can use a package :package: called booktabs `\usepackage{booktabs}` for a visually better table.
 
 ## Adding images
 
-To add an image to the LaTeX file , you need to use figure environment and the graphicx package. Use ```\usepackage{graphicx}``` and
+To add an image to the LaTeX file , you need to use figure environment and the graphicx package. Use `\usepackage{graphicx}` and
 
 ```tex
 \begin{figure}
@@ -280,11 +280,11 @@ Lorem ipsum dolor sit amet \lstinline{print "Hello World"} , consectetur adipisc
 ```
 From this, you can see:   
 
-1. To insert a code block, start with ```\begin{lstlisting}``` and end with ```\end{lstlisting}```  
-2. To import code from another file within the same directory, you can use ```lstinputlisiting{name_of_file}```  
-3. To specify a language for the code, use ```[language=C++]```  
-4. To insert inline code use ```\lstinline```  
-5. To apply custom styles, use the ```\usepackage{color}``` and define your own style then define the listing with your own theme (Please look at code below). You can modify many things with your own style, but you need to read the docs for the correct property name.  
+1. To insert a code block, start with `\begin{lstlisting}` and end with `\end{lstlisting}`  
+2. To import code from another file within the same directory, you can use `lstinputlisiting{name_of_file}`  
+3. To specify a language for the code, use `[language=C++]`  
+4. To insert inline code use `\lstinline`  
+5. To apply custom styles, use the `\usepackage{color}` and define your own style then define the listing with your own theme (Please look at code below). You can modify many things with your own style, but you need to read the docs for the correct property name.  
 6. Interested? More [here](https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings).  
 
 Here is how the code above compiles in TexMaker :  
